@@ -8,78 +8,47 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    // загаданное число
-    var number = 0
-    // раунд
-    var round = 1
-    // сумма очков за раунд
-    var points = 0
-    lazy var secondViewController = getSecondViewController()
-    
+
+    var game: Game!
+
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
 
-    override func loadView() {
-        super.loadView()
-        print("loadView")
-    }
+    // MARK: - Жизненный цикл
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
-        // генерируем случайное число
-        number = Int.random(in: 1...50)
-        // устанавливаем загаданное число в метку
-        label.text = String(number)
+        // Создаем экземпляр сущности "Игра"
+        game = Game(startValue: 0, endValue: 50, rounds: 5)
+        // Обновляем данные о текущем значении загаданного числа
+        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("viewWillAppear")
-    }
+    // MARK: - Взаимодействие View - Model
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("viewDidAppear")
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("viewWillDisappear")
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("viewDidDisappear")
-    }
-    
-    private func getSecondViewController() -> SecondViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
-        return viewController as! SecondViewController
-    }
-
+    // Проверка выбранного пользователем числа
     @IBAction func checkNumber() {
-        let numSlider = Int(slider.value.rounded())
-        if numSlider > number {
-            points += 50 - numSlider + number
-        } else if numSlider < number {
-            points += 50 - number + numSlider
+        game.calculateScore(with: Int(slider.value.rounded()))
+        if game.isGameEnded {
+            showAlertWith(score: game.score)
+            game.restartGame()
         } else {
-            points += 50
+            game.startNewRound()
         }
-        if round == 5 {
-            let alert = UIAlertController(title: "Игра окончена", message: "Вы заработали \(points) очков", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Начать заново", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            round = 1
-            points = 0
-        } else {
-            round += 1
-        }
-        number = Int.random(in: 1...50)
-        label.text = String(number)
+        // Обновляем данные о текущем значении загаданного числа
+        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+    }
+
+    // MARK: - Обновление View
+
+    private func updateLabelWithSecretNumber(newText: String) {
+        label.text = String(newText)
+    }
+
+    private func showAlertWith(score: Int) {
+        let alert = UIAlertController(title: "Игра окончена", message: "Вы заработали \(score) очков", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Начать заново", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 

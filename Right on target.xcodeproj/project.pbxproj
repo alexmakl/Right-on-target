@@ -14,6 +14,7 @@
 		D3AF2BEC26F7B43A006A6D68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF2BEA26F7B43A006A6D68 /* Main.storyboard */; };
 		D3AF2BEE26F7B43D006A6D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AF2BED26F7B43D006A6D68 /* Assets.xcassets */; };
 		D3AF2BF126F7B43D006A6D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF2BEF26F7B43D006A6D68 /* LaunchScreen.storyboard */; };
+		D3B6BB5E2704B3E000190DB3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB5D2704B3E000190DB3 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D3AF2BED26F7B43D006A6D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3AF2BF026F7B43D006A6D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3AF2BF226F7B43D006A6D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B6BB5D2704B3E000190DB3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		D3AF2BE326F7B43A006A6D68 /* Right on target */ = {
 			isa = PBXGroup;
 			children = (
+				D3B6BB5C2704B3B500190DB3 /* Model */,
 				D3AF2BE426F7B43A006A6D68 /* AppDelegate.swift */,
 				D3AF2BE626F7B43A006A6D68 /* SceneDelegate.swift */,
 				D3AF2BE826F7B43A006A6D68 /* ViewController.swift */,
@@ -68,6 +71,14 @@
 				D3AF2BF226F7B43D006A6D68 /* Info.plist */,
 			);
 			path = "Right on target";
+			sourceTree = "<group>";
+		};
+		D3B6BB5C2704B3B500190DB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3B6BB5D2704B3E000190DB3 /* Game.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D302434D270472F9004FDFBF /* SecondViewController.swift in Sources */,
+				D3B6BB5E2704B3E000190DB3 /* Game.swift in Sources */,
 				D3AF2BE926F7B43A006A6D68 /* ViewController.swift in Sources */,
 				D3AF2BE526F7B43A006A6D68 /* AppDelegate.swift in Sources */,
 				D3AF2BE726F7B43A006A6D68 /* SceneDelegate.swift in Sources */,
@@ -298,7 +310,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.amaklakov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -319,7 +331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.amaklakov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
