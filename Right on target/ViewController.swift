@@ -21,22 +21,22 @@ class ViewController: UIViewController {
         // Создаем экземпляр сущности "Игра"
         game = Game(startValue: 0, endValue: 50, rounds: 5)
         // Обновляем данные о текущем значении загаданного числа
-        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
     }
 
     // MARK: - Взаимодействие View - Model
 
     // Проверка выбранного пользователем числа
     @IBAction func checkNumber() {
-        game.calculateScore(with: Int(slider.value.rounded()))
+        game.currentRound.calculateScore(with: Int(slider.value.rounded()))
         if game.isGameEnded {
-            showAlertWith(score: game.score)
+            showAlertWith(score: game.currentRound.score)
             game.restartGame()
         } else {
             game.startNewRound()
         }
         // Обновляем данные о текущем значении загаданного числа
-        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
     }
 
     // MARK: - Обновление View

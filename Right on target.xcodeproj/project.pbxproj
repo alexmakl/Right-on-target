@@ -15,6 +15,8 @@
 		D3AF2BEE26F7B43D006A6D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AF2BED26F7B43D006A6D68 /* Assets.xcassets */; };
 		D3AF2BF126F7B43D006A6D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF2BEF26F7B43D006A6D68 /* LaunchScreen.storyboard */; };
 		D3B6BB5E2704B3E000190DB3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB5D2704B3E000190DB3 /* Game.swift */; };
+		D3B6BB602704CCAC00190DB3 /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB5F2704CCAC00190DB3 /* GameRound.swift */; };
+		D3B6BB622704CCB700190DB3 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB612704CCB700190DB3 /* Generator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D3AF2BF026F7B43D006A6D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3AF2BF226F7B43D006A6D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3B6BB5D2704B3E000190DB3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		D3B6BB5F2704CCAC00190DB3 /* GameRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
+		D3B6BB612704CCB700190DB3 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				D3B6BB5D2704B3E000190DB3 /* Game.swift */,
+				D3B6BB5F2704CCAC00190DB3 /* GameRound.swift */,
+				D3B6BB612704CCB700190DB3 /* Generator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 				D3B6BB5E2704B3E000190DB3 /* Game.swift in Sources */,
 				D3AF2BE926F7B43A006A6D68 /* ViewController.swift in Sources */,
 				D3AF2BE526F7B43A006A6D68 /* AppDelegate.swift in Sources */,
+				D3B6BB622704CCB700190DB3 /* Generator.swift in Sources */,
+				D3B6BB602704CCAC00190DB3 /* GameRound.swift in Sources */,
 				D3AF2BE726F7B43A006A6D68 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +318,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.amaklakov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -331,7 +339,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.amaklakov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
