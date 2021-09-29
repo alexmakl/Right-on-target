@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D302434D270472F9004FDFBF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302434C270472F9004FDFBF /* SecondViewController.swift */; };
 		D3AF2BE526F7B43A006A6D68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF2BE426F7B43A006A6D68 /* AppDelegate.swift */; };
 		D3AF2BE726F7B43A006A6D68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF2BE626F7B43A006A6D68 /* SceneDelegate.swift */; };
 		D3AF2BE926F7B43A006A6D68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF2BE826F7B43A006A6D68 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D302434C270472F9004FDFBF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D3AF2BE126F7B43A006A6D68 /* Right on target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right on target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AF2BE426F7B43A006A6D68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3AF2BE626F7B43A006A6D68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				D3AF2BE426F7B43A006A6D68 /* AppDelegate.swift */,
 				D3AF2BE626F7B43A006A6D68 /* SceneDelegate.swift */,
 				D3AF2BE826F7B43A006A6D68 /* ViewController.swift */,
+				D302434C270472F9004FDFBF /* SecondViewController.swift */,
 				D3AF2BEA26F7B43A006A6D68 /* Main.storyboard */,
 				D3AF2BED26F7B43D006A6D68 /* Assets.xcassets */,
 				D3AF2BEF26F7B43D006A6D68 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D302434D270472F9004FDFBF /* SecondViewController.swift in Sources */,
 				D3AF2BE926F7B43A006A6D68 /* ViewController.swift in Sources */,
 				D3AF2BE526F7B43A006A6D68 /* AppDelegate.swift in Sources */,
 				D3AF2BE726F7B43A006A6D68 /* SceneDelegate.swift in Sources */,
@@ -294,6 +298,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.amaklakov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -314,6 +319,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.amaklakov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
