@@ -6,43 +6,50 @@
 //
 
 protocol GameProtocol {
-    var secretValueGenerator: GeneratorProtocol! { get set }
-    var currentRound: GameRoundProtocol! { get set }
+    associatedtype SecretType
+    var score: Int { get }
+    var secretValue: SecretType { get }
     var isGameEnded: Bool { get }
     func restartGame()
     func startNewRound()
+    // сравнение значения пользователя с загаданным и подсчет очков
+    func calculateScore(secretValue: SecretType, userValue: SecretType)
 }
 
-class Game: GameProtocol {
-    var secretValueGenerator: GeneratorProtocol!
-    var currentRound: GameRoundProtocol!
-    private var lastRound: Int
+class Game<T: SecretValueProtocol>: GameProtocol {
+    typealias SecretType = T
+    var score = 0
+    var secretValue: T
+    private var compareClosure: (T, T) -> Int
+    private var roundsCount: Int!
+    private var currentRoundNumber = 0
     var isGameEnded: Bool {
-        if currentRound.round >= lastRound {
+        if currentRoundNumber == roundsCount {
             return true
         } else {
             return false
         }
     }
 
-    init?(startValue: Int, endValue: Int, rounds: Int) {
-        secretValueGenerator = Generator(startValue: startValue, endValue: endValue)
-        currentRound = GameRound(
-            secretValue: secretValueGenerator.getRandomValue(),
-            round: 1,
-            lastRound: rounds
-        )
-        lastRound = rounds
+    init(secretValue: T, rounds: Int, compareClosure: @escaping (T, T) -> Int) {
+        self.secretValue = secretValue
+        roundsCount = rounds
+        self.compareClosure = compareClosure
+        startNewRound()
     }
 
     func restartGame() {
-        currentRound.round = 0
-        currentRound.score = 0
+        score = 0
+        currentRoundNumber = 0
         startNewRound()
     }
 
     func startNewRound() {
-        currentRound.currentSecretValue = secretValueGenerator.getRandomValue()
-        currentRound.round += 1
+        currentRoundNumber += 1
+        self.secretValue.setRandomValue()
+    }
+
+    func calculateScore(secretValue: T, userValue: T) {
+        score = score + compareClosure(secretValue, userValue)
     }
 }

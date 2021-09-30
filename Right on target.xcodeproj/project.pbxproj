@@ -7,31 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D302434D270472F9004FDFBF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302434C270472F9004FDFBF /* SecondViewController.swift */; };
+		D302434D270472F9004FDFBF /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302434C270472F9004FDFBF /* ColorViewController.swift */; };
 		D3AF2BE526F7B43A006A6D68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF2BE426F7B43A006A6D68 /* AppDelegate.swift */; };
 		D3AF2BE726F7B43A006A6D68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF2BE626F7B43A006A6D68 /* SceneDelegate.swift */; };
-		D3AF2BE926F7B43A006A6D68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF2BE826F7B43A006A6D68 /* ViewController.swift */; };
+		D3AF2BE926F7B43A006A6D68 /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF2BE826F7B43A006A6D68 /* NumberViewController.swift */; };
 		D3AF2BEC26F7B43A006A6D68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF2BEA26F7B43A006A6D68 /* Main.storyboard */; };
 		D3AF2BEE26F7B43D006A6D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AF2BED26F7B43D006A6D68 /* Assets.xcassets */; };
 		D3AF2BF126F7B43D006A6D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF2BEF26F7B43D006A6D68 /* LaunchScreen.storyboard */; };
 		D3B6BB5E2704B3E000190DB3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB5D2704B3E000190DB3 /* Game.swift */; };
-		D3B6BB602704CCAC00190DB3 /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB5F2704CCAC00190DB3 /* GameRound.swift */; };
-		D3B6BB622704CCB700190DB3 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB612704CCB700190DB3 /* Generator.swift */; };
+		D3B6BB642704DA3300190DB3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB632704DA3300190DB3 /* StartViewController.swift */; };
+		D3B6BB662704E50300190DB3 /* GameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB652704E50300190DB3 /* GameFactory.swift */; };
+		D3B6BB6A2706053200190DB3 /* SecretValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB692706053200190DB3 /* SecretValue.swift */; };
+		D3B6BB6C27060D7A00190DB3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6BB6B27060D7A00190DB3 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D302434C270472F9004FDFBF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D302434C270472F9004FDFBF /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		D3AF2BE126F7B43A006A6D68 /* Right on target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right on target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AF2BE426F7B43A006A6D68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3AF2BE626F7B43A006A6D68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3AF2BE826F7B43A006A6D68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3AF2BE826F7B43A006A6D68 /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
 		D3AF2BEB26F7B43A006A6D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3AF2BED26F7B43D006A6D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3AF2BF026F7B43D006A6D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3AF2BF226F7B43D006A6D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3B6BB5D2704B3E000190DB3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		D3B6BB5F2704CCAC00190DB3 /* GameRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
-		D3B6BB612704CCB700190DB3 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		D3B6BB632704DA3300190DB3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		D3B6BB652704E50300190DB3 /* GameFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFactory.swift; sourceTree = "<group>"; };
+		D3B6BB692706053200190DB3 /* SecretValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretValue.swift; sourceTree = "<group>"; };
+		D3B6BB6B27060D7A00190DB3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +71,9 @@
 				D3B6BB5C2704B3B500190DB3 /* Model */,
 				D3AF2BE426F7B43A006A6D68 /* AppDelegate.swift */,
 				D3AF2BE626F7B43A006A6D68 /* SceneDelegate.swift */,
-				D3AF2BE826F7B43A006A6D68 /* ViewController.swift */,
-				D302434C270472F9004FDFBF /* SecondViewController.swift */,
+				D3B6BB632704DA3300190DB3 /* StartViewController.swift */,
+				D3AF2BE826F7B43A006A6D68 /* NumberViewController.swift */,
+				D302434C270472F9004FDFBF /* ColorViewController.swift */,
 				D3AF2BEA26F7B43A006A6D68 /* Main.storyboard */,
 				D3AF2BED26F7B43D006A6D68 /* Assets.xcassets */,
 				D3AF2BEF26F7B43D006A6D68 /* LaunchScreen.storyboard */,
@@ -81,8 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				D3B6BB5D2704B3E000190DB3 /* Game.swift */,
-				D3B6BB5F2704CCAC00190DB3 /* GameRound.swift */,
-				D3B6BB612704CCB700190DB3 /* Generator.swift */,
+				D3B6BB652704E50300190DB3 /* GameFactory.swift */,
+				D3B6BB692706053200190DB3 /* SecretValue.swift */,
+				D3B6BB6B27060D7A00190DB3 /* Color.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,13 +163,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D302434D270472F9004FDFBF /* SecondViewController.swift in Sources */,
+				D302434D270472F9004FDFBF /* ColorViewController.swift in Sources */,
+				D3B6BB642704DA3300190DB3 /* StartViewController.swift in Sources */,
 				D3B6BB5E2704B3E000190DB3 /* Game.swift in Sources */,
-				D3AF2BE926F7B43A006A6D68 /* ViewController.swift in Sources */,
+				D3B6BB662704E50300190DB3 /* GameFactory.swift in Sources */,
+				D3AF2BE926F7B43A006A6D68 /* NumberViewController.swift in Sources */,
 				D3AF2BE526F7B43A006A6D68 /* AppDelegate.swift in Sources */,
-				D3B6BB622704CCB700190DB3 /* Generator.swift in Sources */,
-				D3B6BB602704CCAC00190DB3 /* GameRound.swift in Sources */,
+				D3B6BB6A2706053200190DB3 /* SecretValue.swift in Sources */,
 				D3AF2BE726F7B43A006A6D68 /* SceneDelegate.swift in Sources */,
+				D3B6BB6C27060D7A00190DB3 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +326,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.amaklakov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -339,7 +347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.amaklakov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

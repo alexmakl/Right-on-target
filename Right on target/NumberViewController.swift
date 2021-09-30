@@ -7,42 +7,47 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NumberViewController: UIViewController {
 
-    var game: Game!
+    var game: Game<SecretNumericValue>!
 
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
 
     // MARK: - Жизненный цикл
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Создаем экземпляр сущности "Игра"
-        game = Game(startValue: 0, endValue: 50, rounds: 5)
+        game = (GameFactory.getNumericGame() as! Game<SecretNumericValue>)
         // Обновляем данные о текущем значении загаданного числа
-        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.secretValue.value))
     }
 
     // MARK: - Взаимодействие View - Model
 
     // Проверка выбранного пользователем числа
     @IBAction func checkNumber() {
-        game.currentRound.calculateScore(with: Int(slider.value.rounded()))
+        var userSecretValue = game.secretValue
+        userSecretValue.value = Int(slider.value)
+        game.calculateScore(secretValue: game.secretValue, userValue: userSecretValue)
         if game.isGameEnded {
-            showAlertWith(score: game.currentRound.score)
+            showAlertWith(score: game.score)
             game.restartGame()
         } else {
             game.startNewRound()
         }
         // Обновляем данные о текущем значении загаданного числа
-        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.secretValue.value))
+    }
+
+    @IBAction func closeCurrentScene() {
+        dismiss(animated: true, completion: nil)
     }
 
     // MARK: - Обновление View
 
     private func updateLabelWithSecretNumber(newText: String) {
-        label.text = String(newText)
+        label.text = newText
     }
 
     private func showAlertWith(score: Int) {
